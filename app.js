@@ -139,22 +139,16 @@ const promptUser = () => {
     });
   };
 
-  // const mockData = {
-  //   name: 'Marilyn',
-  //   github: 'marpap',
-  //   projects: []
-  // }
   promptUser()
-  //const pageHTML = generatePage(mockData);
     .then(promptProject)
     .then(portfolioData => {
       console.log(portfolioData);
       const pageHTML = generatePage(portfolioData);
 
 
-      // fs.writeFile('./index.html', pageHTML, err => {
-      //     if(err) throw (err);
-      // });
+      fs.writeFile('./index.html', pageHTML, err => {
+          if(err) throw (err);
+      });
     });
  
      
